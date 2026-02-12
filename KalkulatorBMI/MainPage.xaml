@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KalkulatorBMI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Kalkulator BMI"
+                Style="{StaticResource Headline}"
+                FontSize="35"
+                FontAttributes="Bold"
+                SemanticProperties.HeadingLevel="Level1" 
+                BackgroundColor="#006400"/>
+
+            <VerticalStackLayout>
+                <Label
+                    Text="Podaj wagę (kg): "
+                    Style="{StaticResource SubHeadline}"/>
+                <Entry x:Name="WagaEntry"
+                    Placeholder="waga"
+                    Keyboard="Numeric"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label
+                    Text="Podaj wzrost (cm): "
+                    Style="{StaticResource SubHeadline}"/>
+                <Entry x:Name="WzrostEntry"
+                    Placeholder="wzrost" 
+                    Keyboard="Numeric"/>
+            </VerticalStackLayout>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Oblicz"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center"/>
+
+            <Label x:Name="Wynik"
+                Text="Twoje BMI: "
+                HorizontalOptions="Center"/>
+            
+            <Label x:Name="KategoriaWagowa"
+                Text="Twoja kategoria wagowa: "
+                HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
